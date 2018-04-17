@@ -1,7 +1,11 @@
 
-Task source : https://docs.google.com/document/d/1ihded5qAWkffR0UvPJ5JolwaKOFijpkkT7_vB_EtlZI/edit
+@see 
 
-type /> sbt test
+test/**/RequirementsSpec.scala  - test
+src/**/SparkQL.scala  - implemetation
+
+
+type :  /> sbt test
 
 You should see 
 
