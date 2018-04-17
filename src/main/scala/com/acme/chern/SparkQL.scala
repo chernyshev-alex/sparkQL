@@ -113,10 +113,14 @@ object SparkQL {
    * 
    *  It could be translated to :
    *  
-   *  select category, product, len, rank = dense_rank over window(category order by len desc) 
+   *  select category, product, len, rank
    *  from (
-   *  		select category, product, len = sum(ss_len) from df 
-   *  ) 
+   *  		select category, product, len, rank = dense_rank over window(category order by len desc) 
+   *  		from (
+   *  				select category, product, len = sum(ss_len) from df 
+   * 				group by category, product
+   *  		) 
+   *  )
    *  where runk <= 10
    */
   def top10Products(df: DataFrame)(implicit ss: SparkSession) : DataFrame = {
