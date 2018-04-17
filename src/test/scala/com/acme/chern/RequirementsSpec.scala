@@ -79,7 +79,7 @@ class RequirementsSpec extends FlatSpec with Matchers with BeforeAndAfterAll {
     1 to 5 mins and more than 5 mins""" in {
     
     val result = SparkQL.uniqueUsersCountForPeriods(dfSessions)(spark)
-    println("=== Test 2. median session duration for each category === \n", result)
+    println("=== Test 2. For each category find # of unique users spending < 1m, 1-5m, >5m === \n", result)
     result shouldBe Map("less1m" -> 1, "in1-5m" -> 3, "more5m" -> 3)
   }
 
