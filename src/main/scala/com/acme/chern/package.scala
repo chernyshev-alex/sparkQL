@@ -16,7 +16,6 @@ package object chern {
   val COL_SESSION_END_TIME     = "sessionEndTime"
   val COL_ALL                  = "*"
   val COL_SS_LEN               = "ss_len" 
-  val COL_LEN                  = "len" 
   val COL_MEAN                 = "mean" 
   val COL_RANK                 = "rank"
 
