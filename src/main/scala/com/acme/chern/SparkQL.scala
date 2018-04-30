@@ -84,7 +84,7 @@ object SparkQL {
 
  def uniqueUsersCountForPeriodsSQL(dfWithSessions : DataFrame)(implicit ss: SparkSession) : DataFrame = {
    
-    dfWithSessions.createOrReplaceTempView("events")    
+    dfWithSessions.createOrReplaceTempView("events")  
     
     dfWithSessions.sqlContext.sql("""select category, 
         sum(case when ss_len < 60 then 1 else 0 end) as LESS1M,

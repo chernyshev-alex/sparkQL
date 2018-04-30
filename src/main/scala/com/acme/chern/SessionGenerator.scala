@@ -18,7 +18,7 @@ class SessionGenerator(val inactivityInterval : Int) extends UserDefinedAggregat
                                                      
   override def dataType : DataType = IntegerType
   override def deterministic: Boolean = true
-  override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = { }
+  override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = ???
   override def evaluate(buffer: Row) : Any = session_hash(buffer)
   
   val COL_CATEGORY       = 0
